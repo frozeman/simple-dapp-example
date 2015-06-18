@@ -21,24 +21,24 @@ To start this on your own you need to deploy the contract code from inside `clie
 ## Play around
 
 ### To deploy the contract on your own call:
-
-    var contractInstance = GuessNumber.new({from: web3.eth.accounts[0], gas: 200000, data: contractCode});
-
+```js
+var contractInstance = GuessNumber.new({from: web3.eth.accounts[0], gas: 200000, data: contractCode});
+```
 ### To get the address use:
-
-    contractInstance.address;
-
+```js
+contractInstance.address;
+```
 
 
 
 ### Set the number use:
-
-    GuessNumberInstance.setNumber(10, {from: <your account>, gas: 50000})
-
+```js
+GuessNumberInstance.setNumber(10, {from: <your account>, gas: 50000})
+```
 
 
 ### To send money to the contract use:
-
-    web3.eth.sendTransaction({from: web3.eth.accounts[0], to: <contract address> , value: 123000000000})
-
+```js
+web3.eth.sendTransaction({from: web3.eth.accounts[0], to: <contract address> , value: 123000000000})
+```
 
