@@ -1,6 +1,6 @@
-# Dapp example
+# Ðapp example
 
-This example showcases the basic principles of a dapp build in Meteor:
+This example showcases the basic principles of a Ðapp build in Meteor:
 
 - Separate the ethereum logic from you dapp
 - Receive Logs from contracts
