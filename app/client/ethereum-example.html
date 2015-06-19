@@ -8,7 +8,6 @@
     <h2>Guess which number was set!</h2>
 
     {{> guessNumber}}
-    
 
     <h2>Block Infos</h2>
 
@@ -21,22 +20,12 @@
 </body>
 
 
-<template name="guessNumber">
-    <input type="text">
-    {{#if TemplateVar.get "setNumber"}}
-        <button class="set">Set a number to guess (cost money :)</button>
-    {{else}}
-        <button class="guess">Guess!</button>
-    {{/if}}
-
-    <br>
-    <a href="javascript:void(0);" class="switch">Switch functionality</a>
-</template>
-
 
 <template name="blockchainStatus">
     <pre>{{currentBlock}}</pre>
 </template>
+
+
 
 
 <template name="deposits">
@@ -46,4 +35,20 @@
         <p>Block: {{blockNumber}}</p>
         ------------------
     {{/each}}
+</template>
+
+
+
+<template name="guessNumber">
+    <input type="text">
+
+    {{#if TemplateVar.get "setNumber"}}
+        <button class="set">Set a number to guess (cost money :)</button>
+    {{else}}
+        <button class="guess">Guess!</button>
+    {{/if}}
+
+    <br>
+    <a href="javascript:void(0);" class="switch">Switch functionality</a>
+    <br>
 </template>
