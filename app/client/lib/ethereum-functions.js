@@ -1,10 +1,3 @@
-
-// set providor
-if(!web3.currentProvidor)
-    web3.setProvider(new web3.providers.HttpProvider("http://localhost:8545"));
-
-
-
 // get the latest block
 web3.eth.filter('latest').watch(function(e, blockHash) {
     if(!e) {
@@ -21,7 +14,7 @@ web3.eth.filter('latest').watch(function(e, blockHash) {
 GuessNumberInstance.Deposit({},{fromBlock: 0, toBlock: 'latest'}).watch(function(e, log) {
     if(!e) {
         console.log('Money arrived! From:'+ log.args.from, log.args.value.toString(10));
-        
+
         // add the transaction to our collection
         Deposits.upsert('tx_'+ log.transactionHash ,{
             from: log.args.from,
