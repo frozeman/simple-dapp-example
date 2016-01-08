@@ -42,3 +42,6 @@ GuessNumberInstance.setNumber(10, {from: <your account>, gas: 50000})
 web3.eth.sendTransaction({from: web3.eth.accounts[0], to: <contract address> , value: 123000000000})
 ```
 
+
+### A workshop explaining how to build Ðapps with Meteor using this project as an example can be found here:
+https://www.youtube.com/watch?v=SayS1dcMVWU
